@@ -1,0 +1,111 @@
+/* Bootstrap breakpoints */
+
+$breakpoint-xs-max: 575px;
+
+$breakpoint-sm-min: 576px;
+$breakpoint-sm-max: 767px;
+
+$breakpoint-md-min: 768px;
+$breakpoint-md-max: 991px;
+
+$breakpoint-lg-min: 992px;
+$breakpoint-lg-max: 1199px;
+
+$breakpoint-xl-min: 1200px;
+
+
+/* Font sizes */
+
+$font-giant: 3rem;
+$font-extra: 2.5rem;
+$font-huge: 2rem;
+$font-large: 1.5rem;
+$font-bigger: 1.2rem;
+$font-normal: 1rem;
+$font-small: .9rem;
+$font-smaller: .75rem;
+$font-tiny: .65rem;
+
+
+/* Font weights */
+
+$font-bolder: 800;
+$font-bold: 700;
+$font-regular: 400;
+$font-weight-bold: 600;
+
+$padding-big: 2.5rem;
+
+/* Font line-heights */
+$line-height-giant: 5rem;
+$line-height-extra: 4rem;
+$line-height-huge: 2.4rem;
+$line-height-large: 1.8rem;
+$line-height-bigger: 1.2rem;
+$line-height-normal: 1rem;
+$line-height-small: .9rem;
+$line-height-smaller: .75rem;
+$line-height-tiny: .65rem;
+
+/* Space sizes */
+$space-giant: 8rem;
+$space-extra: 3rem;
+$space-huge: 2.25rem;
+$space-large: 1.75rem; // most common
+$space-bigger: 1.2rem; 
+$space-medium: 1rem; // must stay 1rem - equal to bootstrap spacing
+$space-small: .65rem;
+$space-tiny: .25rem;
+
+$spaces: (
+    "tiny" $space-tiny,
+    "small" $space-small,
+    "medium" $space-medium,
+    "bigger" $space-bigger,
+    "large" $space-large,
+    "huge" $space-huge,
+    "extra" $space-extra,
+    "giant" $space-giant
+);
+
+$position-negative-medium: -2.5rem;
+$position-negative-small: -1.6rem;
+
+$padding-big: 2rem;
+$padding-normal: 1.6rem;
+
+/* Border radiuses */
+$radius-bigger: 1rem;
+$radius-medium: .5rem;
+$radius-small: .25rem;
+
+/* Colors */
+$c-red: #DA2127;
+$c-beige: #FBF7F4;
+$c-beige-dark: #E2D3C0;
+$c-beige-darker: #C7AE8B;
+
+
+$c-white: #FFFFFF;
+
+$c-light-gray: #F3F3F3;
+$c-normal-gray: #C4C4C4;
+$c-gray: #838383;
+$c-dark-gray: #212121;
+
+$c-black: #000000;
+
+$primary-color: #000;
+$secondary-color: #222;
+
+$c-navy: #083d77;
+$c-blue: #dbdeff;
+$c-blue-light: #0568a6;
+
+// Font colors
+$c-font-black: $c-dark-gray;
+
+// Binds
+$c-primary: $c-red;
+$c-table-light: $c-light-gray;
+$c-table-dark: $c-normal-gray;

@@ -1,0 +1,27 @@
+
+{block post}
+{if $post->image}
+<div class="box box--thumbnail" style="background-image: url({wpImage $post->image medium})">
+{else}
+<div class="box">
+{/if}
+    {if $post->image}
+        <div class="box__background-overlay"></div>
+    {/if}
+    <div class="box__content">
+        <div class="box__infos">
+            <div class="box__date">{$post->created|date:'j. n. Y'}</div>
+        </div>
+        <a href="{wpPermalink $post->id}" class="box__title">{$post->name|noescape}</a>
+        {if $post->image == ''}
+            <div class="box__desc">
+                {if $post->perex != ""}
+                    {$post->perex|truncate:150|noescape} 
+                {else}
+                    {$post->content|noescape|stripHtml|truncate:150}
+                {/if}
+            </div>
+        {/if}
+    </div>
+</div>
+{/block}

@@ -1,0 +1,51 @@
+{import 'wp/header/header.latte'}
+{import 'wp/header/headerMobile.latte'}
+{import 'wp/footer/footer.latte'}
+{import 'wp/loader/loader.latte'}
+{import 'photoswipe/photoswipe.latte'}
+{import 'wp/components/favicon.latte'}
+{import 'wp/media/media.latte'}
+
+<!doctype html>
+<html class="page" lang="{$app->site->language}">
+    <head>
+        <meta charset="{$app->site->charset}" />
+        <meta name="description" content="{$app->site->description}">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {include favicon}
+
+        {ifset #ogTags}
+            {include ogTags}
+        {/ifset}
+
+        {ifset #css}
+            {include css}
+        {/ifset}
+
+        {php wp_head()}
+    </head>
+    <body class="page__body">
+        {include header}
+        {include headerMobile}
+        
+        <div class="page__wrapper">
+            {include content}
+        </div>
+
+        <div class="page__media">
+            {ifset #media}
+                {include media}
+            {/ifset}
+        </div>
+
+        {include footer}
+
+        {ifset #js}
+            {include js}
+        {/ifset}
+
+        {php wp_footer()}
+    </body>
+</html>

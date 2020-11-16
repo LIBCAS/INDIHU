@@ -1,0 +1,26 @@
+{import '_parts/posts.latte'}
+{import '../components/pagination.latte'}
+
+{block blockPosts}
+    <div class="posts">
+        <div class="posts__items">
+            {include posts}
+        </div>
+        {if $showNext}
+            <div class="posts__buttons">
+                <a href="{$archivLink}" class="button">Zobrazit všechny</a>
+            </div>
+        {/if}
+        {if $showPagination}
+        <div class="posts__pagination">
+            {include pagination}        
+        </div>
+        {/if}
+    </div>
+
+    <script>
+        var categories = {$categories};
+        var count = {$count};
+    </script>
+
+{/block}

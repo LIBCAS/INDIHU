@@ -1,0 +1,113 @@
+.slider {
+    position: relative;
+    padding: 0 $space-extra $space-huge $space-extra; 
+
+    @include media-breakpoint-down(md) {
+        padding-bottom: 4rem;
+    }
+
+    &__list {
+        @include ul-unstyled;
+
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__item {
+        @include a-unstyled($c-blue-light);
+
+        padding: 1.2rem;
+        height: 220px;
+        min-width: 33%;
+        margin-right: 5px;
+
+        @include media-breakpoint-down(md) {
+            min-width: 50%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            min-width: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        color: $c-blue-light;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+        height: 100%;
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: .4rem 1rem;
+    }
+
+    &__image {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        border-radius: 50%;
+        background-size: 40px 40px;
+    }
+
+    &__title {
+        padding: 0 1rem;
+        font-size: $font-normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__project {
+        margin-left: auto;
+        font-size: $font-bigger;
+    }
+
+    &__comment {
+        border-top: 1px solid $c-normal-gray;
+        padding: 0.5rem 1rem;
+        text-align: left;
+        color: rgba(0, 0, 0, 0.5);
+        height: 120px;
+        font-size: 0.95rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__left, &__right {
+        border-radius: 50%;
+        position: absolute;
+        height: 2.8rem;
+        width: 2.8rem;
+        background-color: $c-blue-light;
+        line-height: 0;
+        color: $c-white;   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $font-bigger;
+        top: 90px;
+        cursor: pointer;
+
+        @include media-breakpoint-down(md) {
+            height: 2rem;
+            width: 2rem;
+            top: 100px;
+        }
+    }
+
+    &__left {
+        left: 0;
+    }
+
+    &__right {
+        right: 0;
+    }
+}

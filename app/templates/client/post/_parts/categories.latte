@@ -1,0 +1,13 @@
+{block categories}
+<div class="categories">
+    <div class="categories__list">
+        {foreach $categories as $category}
+        <div class="categories__item">
+            <a class="categories__link" href="/kategorie/{$category->slug}">
+                {$category->name}
+            </a>
+        </div>
+        {/foreach}
+    </div>
+</div>    
+{/block}

@@ -1,0 +1,64 @@
+.footer{
+
+    background-color: $c-navy;
+    color: $c-white;
+
+
+    &__container{
+        @extend .container;
+
+        display: flex;
+        flex-wrap: wrap;
+        
+        &--small{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__logo-text{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        text-decoration: none;
+        align-items: center;
+        margin: 1.5rem 0;
+        padding: 1rem 0;
+        color: $c-white;
+
+        a:hover {
+            color: $c-white;
+        }
+    }
+
+    &__logo-title{
+        text-transform: none;
+        font-weight: $font-bold;
+        font-size: $font-huge;
+        line-height: $line-height-huge;
+        color: $c-white;
+    }
+
+    &__logo-subtitle{
+        padding: 0 0 0 20px;
+        font-size: $font-smaller;
+        line-height: $line-height-normal;
+        font-weight: bold;
+        width: 200px;
+        text-align: left;
+        color: $c-white;
+    }
+
+    &__info{
+        text-align: right;
+        font-size: $font-smaller;
+        line-height: $line-height-normal;
+        flex-direction: row;
+        justify-content: right;
+        text-decoration: none;
+        align-items: center;
+        margin-left: auto;
+        padding: 1.4rem 0;
+        color: $c-white;
+    }
+}

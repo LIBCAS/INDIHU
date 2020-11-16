@@ -1,0 +1,38 @@
+{block item}
+    <div class="search-results__item">
+        <h3 class="search-results__title">
+            <a class="search-results__link" href="{$item['url']}">
+                {ifset $highlight['title'][0]}
+                    {$highlight['title'][0]|noescape}
+                {else}
+                    {$item['title']}
+                {/ifset}
+            </a>
+        </h3>
+        <div class="search-results__head">
+            <div class="search-results__date">
+                {$item['date_publish']|date:'j. n. Y'}
+            </div>
+            <div class="search-results__badges">
+                <div class="search-results__badge">
+                    {translation elasticSearchTypes $item['type']}
+                </div>
+                {if $prosecution == null && $item['prosecution_name'] !== null}
+                    <div class="search-results__badge">
+                        {$item['prosecution_name']}
+                    </div>
+                {/if}
+            </div>
+        </div>
+        <div class="search-results__description">
+            {ifset $highlight['description']}
+                {foreach $highlight['description'] as $description}
+                    {$description|noescape}
+                    {sep}...{/sep}
+                {/foreach}
+            {else}
+                {$item['description']|truncate:300|noescape}
+            {/ifset}
+        </div>
+    </div>
+{/block}

@@ -1,0 +1,9 @@
+{import 'post.latte'}
+
+{block posts}
+    {foreach $posts['items'] as $post}
+        <div class="posts__item">
+            {include post, post => $post}
+        </div>
+    {/foreach}
+{/block}

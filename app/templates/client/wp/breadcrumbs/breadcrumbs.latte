@@ -1,0 +1,11 @@
+{block breadcrumbs}
+<div class="jumbo-alt__breadcrumbs">
+    <div class="breadcrumbs">
+        {foreach $breadcrumbs->items as $crumb}
+            <div class="breadcrumbs__item">
+                <a class="breadcrumbs__link"{sep} href="{$crumb->link|noescape}"{/sep}>{$crumb->title|noescape}</a>
+            </div>
+        {/foreach}
+    </div>
+</div>
+{/block}

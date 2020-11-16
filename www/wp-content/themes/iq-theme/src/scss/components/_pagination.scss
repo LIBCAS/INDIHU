@@ -1,0 +1,33 @@
+/* Pagination block */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    &__item {
+        background: #da2128;
+        color: white;
+        padding: 5px 15px;
+        margin: 0px 3px;
+        text-decoration: none;
+        display: block;
+
+        &:hover{
+            color: white;
+            text-decoration: underline;
+        }
+        
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &_active {
+            text-decoration: underline;
+        }
+    }
+
+    &__dots {
+        display: block;
+        margin-left: 3px;
+    }
+}

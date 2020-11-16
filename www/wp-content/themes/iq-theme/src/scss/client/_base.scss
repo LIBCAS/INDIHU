@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "Acumin Pro";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Acumin Pro"), url('/wp-content/themes/iq-theme/font/Acumin-RPro.woff') format('woff');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Acumin Pro", sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: $line-height-large;
+    font-weight: $font-regular;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 500;
+    color: $c-blue-light;
+    padding: .75rem 2rem 0.5rem 2rem;
+    display: inline-block;
+    line-height: $line-height-extra;
+    font-size: $font-extra;
+
+    @include media-breakpoint-down(md) {
+        font-size: $font-large;
+        line-height: $line-height-huge;
+    }
+}
+
+h2 {
+    font-weight: 500;
+    color: $c-blue-light;
+    padding: 4rem 2rem 1.5rem 2rem;
+    display: inline-block;
+    line-height: $line-height-extra;
+    font-size: $font-extra;
+
+    @include media-breakpoint-down(md) {
+        font-size: $font-large;
+        line-height: $line-height-huge;
+    }
+}
+
+h3,
+h4 {
+    font-weight: 500;
+    color: $c-blue-light;
+}
+
+.kt-gutter-default.kt-row-layout-left-golden > .wp-block-kadence-column {
+    @media (max-width: 1024px) {
+        flex-basis: auto !important;
+    }
+}
+
+.button {
+    color: #fff;
+    background-color: $primary_color;
+    padding: .65rem 1rem;
+    border-radius: .25rem;
+    font-weight: 700;
+    border: 2px solid $primary_color;
+    display: inline-flex;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background-color .2s ease-in-out,
+        color .2s ease-in-out;
+
+    &:hover {
+        background-color: #fff;
+        color: $primary_color;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}

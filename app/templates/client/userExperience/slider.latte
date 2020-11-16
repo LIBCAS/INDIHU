@@ -1,0 +1,25 @@
+{block slider}
+<h2>Zkušenosti uživatelů</h2>
+<div class="slider">
+    <div class="slider__list">
+        {foreach $userExperiences['items'] as $userExperience}
+        <div class="slider__item" >
+            <div class="slider__content">
+                <div class="slider__head">
+                    <div class="slider__image" style="background-image: url({wpImage $userExperience->image medium});"></div>
+                    <div class="slider__title">{$userExperience->name}</div>
+                    <div class="slider__project">{$projects[$userExperience->projectId]}</div>
+                </div>
+                <div class="slider__comment" style="background: url({$img_dir}/quotes.png) no-repeat top 5px left 5px;">{$userExperience->comment}</div>
+            </div>
+        </div>
+        {/foreach}
+    </div>
+    <div class="slider__left">
+        <i class="fas fa-angle-left"></i>
+    </div>
+    <div class="slider__right">
+        <i class="fas fa-angle-right"></i>
+    </div>
+</div>
+{/block}

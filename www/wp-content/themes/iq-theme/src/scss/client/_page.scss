@@ -1,0 +1,39 @@
+.page,
+.post {
+    &__wrapper {
+        padding-bottom: $space-huge;
+        -webkit-box-shadow: inset 0px 20px 30px -20px rgba(0,0,0,0.5);
+        -moz-box-shadow: inset 0px 20px 30px -20px rgba(0,0,0,0.5);
+        box-shadow: inset 0px 20px 30px -20px rgba(0,0,0,0.5);
+    }
+
+    &__container {
+        @extend .container;
+    }
+
+    &__content > * {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__content > h2,
+    &__content > h1 {
+        max-width: 730px;
+    }
+
+    &__content > div {
+        max-width: 100%;
+    }
+
+    &__header {
+        padding-top: $space-huge;
+        text-align: center;
+    }
+
+    &__media {
+        background-color: $c-blue;
+        width: 100%;
+        padding: 6rem 0 6rem 0;
+    }
+}

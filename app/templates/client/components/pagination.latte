@@ -1,0 +1,37 @@
+{block pagination}
+{if $paginator && $paginator->getPageCount() > 1}
+    <div class="pagination">
+        {if !$paginator->isFirst()}
+            <button class="pagination__item" data-page="{$paginator->page - 1}"><</button>
+        {/if}
+        {if $paginator->page > 3}
+            <button class="pagination__item" data-page="1">1</button>
+        {/if}
+        {if $paginator->page > 4}
+            <button class="pagination__item pagination__item_disable" disabled>...</button>
+        {/if}
+        {for $i = $paginator->page - 2; $i < $paginator->page; $i++}
+            {if $i > 0}
+                <button class="pagination__item" data-page="{$i}">{$i}</button>
+            {/if} 
+        {/for}
+        <button class="pagination__item pagination__item_active" data-page="{$paginator->page}">{$paginator->page}</button>
+        {for $i = $paginator->page + 1; $i < $paginator->page + 3; $i++}
+            {if $i <= $paginator->getPageCount()}
+            <button class="pagination__item" data-page="{$i}">{$i}</button>
+            {/if}
+        {/for}
+
+        {if $paginator->page < ($paginator->getPageCount() - 3)}
+            <button class="pagination__item pagination__item_disable" disabled>...</button>
+        {/if}
+        {if $paginator->page < ($paginator->getPageCount() - 2)}
+            <button class="pagination__item" data-page="{$paginator->getPageCount()}">{$paginator->getPageCount()}</button>
+        {/if}
+        
+        {if !$paginator->isLast()}
+            <button class="pagination__item" data-page="{$paginator->page + 1}">></button>
+        {/if}
+    </div>
+{/if}
+{/block}

@@ -1,0 +1,17 @@
+.document-selected{
+    &__button{
+        background: #0085ba;
+        float: right;
+        height: 28px;
+        padding: 0 10px 1px;
+        cursor: pointer;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 3px;
+        color: white;
+
+        &:hover{
+            background: #09739c;
+        }
+    }
+}

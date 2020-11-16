@@ -1,0 +1,41 @@
+ 
+{* CSS *}
+<link rel="stylesheet" href="{$css_dir}/toastr/toastr.min.css">
+<link rel="stylesheet" href="{$css_dir}/toastr/toastr-custom-style.css">
+{*<link rel="stylesheet" href="{$css_dir}/admin/admin-style.css"/>*}
+<link rel="stylesheet" href="{$css_dir}/sweetalert2/sweetalert2.min.css"/>
+<link rel="stylesheet" href="{$css_dir}/select2/select2.min.css"/>
+<link rel="stylesheet" href="{$css_dir}/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css"/>
+<link rel="stylesheet" href="{$css_dir}/bootstrap-datetimepicker/bootstrap-datetimepicker-standalone.css"/>
+<link rel="stylesheet" href="{$css_dir}/font-awesome/font-awesome.min.css">
+<link rel="stylesheet" href="{$css_path}"/>
+{*<link rel="stylesheet" href="{$css_dir}/admin/remodal/remodal.css"/>
+<link rel="stylesheet" href="{$css_dir}/admin/remodal/remodal-default-theme.css"/>*}
+
+
+
+<div class="wrap">
+    {include content}      
+</div>
+
+{* JS *}
+<script src="{$js_dir}/toastr/toastr.min.js"></script>
+<script src="{$js_dir}/toastr/toastrInit.js"></script>
+<script src="{$js_dir}/sweetalert2/sweetalert2.min.js"></script>
+<script src="{$js_dir}/sweetalert2/sweetalert2Init.js"></script>
+<script src="{$js_dir}/select2/select2.full.min.js"></script>
+<script src="{$js_dir}/select2/select2Init.js"></script>
+<script src="{$js_dir}/moment/moment-with-locales.js"></script>
+<script src="{$js_dir}/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="{$js_dir}/bootstrap-datetimepicker/bootstrap-datetimepickerInit.js"></script>
+{*<script src="{$js_dir}/admin/remodal/remodal.min.js"></script>*}
+
+{if $flashMessages}
+<script>
+    jQuery(document).ready(function(){
+        {foreach $flashMessages as $message}
+            toastr.{$message['type']|noescape}({$message['message']});
+        {/foreach}
+    })
+</script>
+{/if}

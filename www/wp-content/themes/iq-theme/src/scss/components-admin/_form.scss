@@ -1,0 +1,72 @@
+.custom-form-wrap {
+    width: 80%;
+
+    .form-field{
+        input, select, textarea, span.select2{
+            width: 100% !important;
+        }
+
+        input[type=checkbox], input[type=radio]{
+            width: 15px !important;
+        }
+
+        .wp-editor-container input{
+            width: auto !important;
+        }
+    }
+}
+
+.profile-photo {
+    width: 150px;
+}
+
+/* media frame */
+
+.image-box{
+    display: inline-block;
+}
+
+.image-radio{
+    visibility: hidden;
+
+    &:checked + label{
+        border: 5px solid #2700ff;
+    }
+}
+
+.image-label{
+    width: 130px;
+    display: inline-block;
+    border: 5px solid white;
+    margin-bottom: 30px;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.image-remove{
+    width: 100%;
+    background: white;
+    border-radius: 0px;
+    border: none;
+    padding: 7px 0px;
+    margin-top: 2px;
+}
+
+.float-right {
+    float: right !important; 
+    top: 10px !important;  
+}
+
+.file{
+    display: flex;
+    background-color: #ffffff;
+    padding: 5px 5px;
+
+    i{
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,40 @@
+.posts {
+
+    display: flex;
+    flex-direction: column;    
+
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1rem;
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    &__pagination{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+
+    &__item {
+        padding: 1rem;
+        width: 33.33%;
+
+        @include media-breakpoint-down(md) {
+            width: (100% / 2);
+        }
+    
+        @include media-breakpoint-down(sm) {
+            width: (100% / 1);
+        }
+        
+        &--full{
+            width: (100% / 1);
+        }
+    }
+}

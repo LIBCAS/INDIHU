@@ -1,0 +1,65 @@
+.dv-header{
+    display: flex;
+    
+    .dv-search {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 8;
+    
+        .dv-search-block {
+            flex-grow: 1;
+            padding: 4px;
+    
+            &:first-child {
+                padding-left: 0px;
+            }
+    
+            &:last-child {
+                padding-right: 0px;
+            }
+    
+            label{
+                width: 100%;
+                display: block;
+                font-size: 1.2em;
+                padding: 3px 0px;
+            }
+    
+            input, select{
+                width: 100%;
+                display: block;
+                height: 31px;
+                margin: 0px;
+            }
+        }
+    
+    }
+    
+    .dv-pagination{
+        flex-grow: 2;
+        display: flex;
+        align-items: flex-end;
+        padding: 4px;
+        padding-right: 0px; 
+
+        button{
+            flex-grow: 1;
+            height: 31px;
+            border: none;
+            cursor: pointer;
+            margin: 0px 2px;
+            width: 12px;
+
+            &.active, &:hover{
+                background-color: #0073aa;
+                color: white;
+            }
+        }
+    }
+}
+
+.dv-body{
+    .dv-table{
+        border: none;
+    }
+}

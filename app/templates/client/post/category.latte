@@ -1,0 +1,20 @@
+{layout '../@layout.latte'}
+
+{import 'blockPosts.latte'}
+
+{block content}
+<div class="post">
+    <div class="page__container">
+        <div class="page__header">
+            <h1 class="page__title">{$category->name}</h1>
+        </div>
+    </div>
+    <div class="page__container">
+        <div class="page__content">
+            {ifset #blockPosts}
+                {include blockPosts}
+            {/ifset}
+        </div>
+    </div>
+</div>    
+{/block}

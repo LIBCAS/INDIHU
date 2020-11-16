@@ -1,0 +1,14 @@
+ul.is-style-theme li {
+    padding: .4rem 1.25rem;
+    list-style: none;
+    position: relative;
+}
+ul.is-style-theme li:before {
+    content: "";
+    height: 2.5px;
+    position: absolute;
+    width: .75rem;
+    background-color: $primary_color;
+    left: 0;
+    top: 50%;
+}

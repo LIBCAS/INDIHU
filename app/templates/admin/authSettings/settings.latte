@@ -1,0 +1,32 @@
+{layout '../@layout.latte'}
+
+{block content}
+    <h2>Nastavení přístupu</h2>
+    <div class="custom-form-wrap">
+        {$form->render("begin")}            
+
+            <fieldset class="form-field">
+                {$form['ip_addresses']->label}<br>
+                <em>(Vložte každou adresu na nový řádek)</em>
+                <div>
+                    {$form['ip_addresses']->control}
+                </div>
+            </fieldset>
+            <fieldset class="form-field">
+                {$form['page']->label}
+                <div>
+                    {$form['page']->control}
+                </div>
+            </fieldset>  
+            
+            <br>
+            <fieldset class="form-field">
+                <div>
+                    <span class="float-right">{$form['send']->control}</span>
+                </div>
+            </fieldset>
+
+        {$form->render("end")}        
+    </div>
+
+{/block}

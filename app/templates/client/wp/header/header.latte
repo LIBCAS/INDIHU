@@ -1,0 +1,22 @@
+{block header}
+<header class="header">
+    <div class="header__container">
+        <a href="{get_site_url()}" class="header__logo-text">
+            <img class="" src="{$img_dir}/logo.png" />
+        </a>
+        {if $menuPrimary}
+            <ul class="header__menu header-menu">
+                {foreach $menuPrimary->items as $item}
+                <li class="header-menu__item">
+                    <a href="{$item->link}" class="header-menu__link">{$item->title}</a>
+                </li>
+                {/foreach}
+            </ul>
+        {/if}
+        <div class="header__buttons">
+            {*<a href="#s" class="button"><i class="fas fa-search"></i></a>*}
+            <button id="mobile-menu-button" class="button header__mobile-toggle">MENU</button>
+        </div>
+    </div>
+</header>
+{/block}

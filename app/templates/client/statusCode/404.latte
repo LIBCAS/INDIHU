@@ -1,0 +1,13 @@
+{layout '../@layout.latte'}
+
+{block content}
+<div class="e404">
+	<div class="e404__container container">
+		<h1 class="e404__title">404</h1>
+		<div class="e404__info">
+			Stránka nebyla nenalezena.
+		</div>
+        <a class="e404__button" href="{$app->site->homeUrl}">Úvodní stránka</a>
+	</div>
+</div>
+{/block}

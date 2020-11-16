@@ -1,0 +1,37 @@
+.smart-slider{
+
+    &__list-item {
+        padding-left: 35px;
+        background: url(/wp-content/themes/iq-theme/dist/images/list.png) no-repeat 0 center;
+    }
+
+    &__icon-mind,
+    &__icon-ocr,
+    &__icon-index,
+    &__icon-exhibition {
+        padding-left: 50px;
+        background-size: 35px 35px !important;
+        background-position: 0px 5px !important;
+    }
+
+    &__icon-mind {
+        background: url(/wp-content/themes/iq-theme/dist/images/mind-slider.png) no-repeat;
+    }
+
+    &__icon-ocr {
+        background: url(/wp-content/themes/iq-theme/dist/images/ocr-slider.png) no-repeat;
+    }
+
+    &__icon-index {
+        background: url(/wp-content/themes/iq-theme/dist/images/index-slider.png) no-repeat;
+    }
+
+    &__icon-exhibition {
+        background: url(/wp-content/themes/iq-theme/dist/images/exhibition-slider.png) no-repeat;
+    }
+}
+// FIX FOR SMART SLIDER - FONT-FAMILY DESTROY THE PAGE 
+.wp-block-nextend-smartslider3 div#n2-ss-2 *{
+
+    font-family: 'Acumin Pro', sans-serif !important;
+}

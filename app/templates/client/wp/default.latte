@@ -1,0 +1,9 @@
+{layout '../@layout.latte'}
+
+{block content}
+<div class="main">
+    <div class="main__container">
+        {$post->post_content|wpContent|noescape}
+    </div>
+</div>
+{/block}

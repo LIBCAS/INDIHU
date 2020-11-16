@@ -1,0 +1,21 @@
+.document-frame{
+
+    display: flex;
+
+    &__left {
+        flex: 1;
+        padding-right: $block-space;
+    }
+
+    &__right{
+        flex: 1;
+        padding-left: $block-space;
+    }
+
+    &__center {
+        flex: 3;
+        padding: 0px $block-space;
+        border-right: 1px solid #e2e4e7;
+        border-left: 1px solid #e2e4e7;
+    }
+}

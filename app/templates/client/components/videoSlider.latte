@@ -1,0 +1,17 @@
+{block videoSlider}
+    <div class="video-slider">
+        <div class="video-slider__menu">
+            <ul class="video-slider__list">
+                <li id="index" class="video-slider__item"><img class="video-slider__icon" src="{$img_dir}/index-video.png" /><span class="video-slider__text">Index</span></li>
+                <li id="mind" class="video-slider__item"><img class="video-slider__icon" src="{$img_dir}/mind-video.png" /><span class="video-slider__text">Mind</span></li>
+                <li id="exhibition" class="video-slider__item bold"><img class="video-slider__icon" src="{$img_dir}/exhibition-video.png" /><span class="video-slider__text">Exhibition</span></li>
+                <li id="ocr" class="video-slider__item"><img class="video-slider__icon" src="{$img_dir}/ocr-video.png" /><span class="video-slider__text">OCR</span></li>
+            </ul>
+        </div>
+        <div class="video-slider__video">
+            <div class="video-slider__video-iframe">
+                <iframe id="videoSliderIframe"class="video-slider__hidden video-slider__video-iframe-content" src="https://www.youtube.com/embed/aZUWAtPBu8Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+{/block}

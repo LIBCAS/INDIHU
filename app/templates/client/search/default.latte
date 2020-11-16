@@ -1,0 +1,98 @@
+{layout '../@layout.latte'}
+
+{import '_parts/item.latte'}
+
+{block content}
+    <div class="main">
+        <div class="main__container">
+            <div class="search-page">
+                <div class="search-page__form-desktop">
+                    <form action="" method="get" class="search-page__search" role="search">
+                        <input class="search-page__input" name="s" placeholder="Hledat" value="{$_GET['s']}">
+                        <button class="search-page__button"><span class="search-page__icon"></span></button>
+                    </form>
+                </div>
+                <form action="{$app->site->homeUrl}" method="get" class="search-page__form-mobile">
+                    <div class="search-page__search" role="search">
+                        <input class="search-page__input" name="s" placeholder="Hledat" value="{$_GET['s']}">
+                         {if $prosecution}
+                            <input class="input-text_hidden" name="prosecution" type="text" value="{$prosecution->id}">
+                        {/if}
+                        <button class="search-page__button"><span class="search-page__icon"></span></button>
+                    </div>
+                    <select class="input-select input-select_fullwidth" name="type">
+                        <option value="all">Vyberte modul</option>
+                        {foreach $itemType as $type}
+                            <option {isset($_GET['type']) && $_GET['type'] == $type ? selected} value="{$type}">{translation elasticSearchTypes $type}</option>
+                        {/foreach}
+                    </select>
+                </form>
+                <div class="search-page__types">
+                    <a class="search-page__type{if isset($_GET['type']) && $_GET['type'] == ''} search-page__type_active{/if}" href="{$app->site->homeUrl}?s={$_GET['s']|escapeurl}{if $prosecution}&prosecution={$prosecution->id}{/if}">Všechno</a>
+                    {foreach $itemType as $type}
+                        <a class="search-page__type{if isset($_GET['type']) && $_GET['type'] == $type} search-page__type_active{/if}" href="{$app->site->homeUrl}?s={$_GET['s']|escapeurl}&type={$type}{if $prosecution}&prosecution={$prosecution->id}{/if}">{translation elasticSearchTypes $type}</a>
+                    {/foreach}
+                </div>
+                
+                <div class="search-results">
+                    {if $prosecution}
+                        <div class="">
+                            Vyhledávání pouze v rámci: <a href="{$prosecution->homepageUrl}">{$prosecution->name}</a> (<a href="{$app->site->homeUrl}?s={$_GET['s']|escapeurl}{if $currentType}&type={$currentType}{/if}">Prohledat celý web</a>)
+                        </div>
+                    {/if}
+                    {if $results}
+                        <div class="search-results__count">
+                            Počet výsledků pro výraz <strong>{$_GET['s']}</strong>: {$results['total']}
+                        </div>
+                        
+                        <div class="search-results__items">
+                            {foreach $results['hits'] as $result}
+                                {include item, item => $result['_source'], 'highlight' => $result['highlight']}
+                            {/foreach}
+                        </div>
+                        
+                        {if $pagesCount > 1}
+                            <div class="pagination">
+                                {if $currentPage != 1}
+                                    <a href="{$url}&pg={$currentPage - 1}" class="pagination__item"><<</a>
+                                {/if}
+
+                                {if $currentPage > 3}
+                                    <a href="{$url}&pg=1" class="pagination__item">1</a>
+                                {/if}
+                                {if $currentPage > 4}
+                                    <a class="pagination__dots">...</a>
+                                {/if}
+
+                                {for $i = $currentPage-2; $i < $currentPage; $i++}
+                                    {if $i > 0}
+                                        <a href="{$url}&pg={$i}" class="pagination__item">{$i}</a>
+                                    {/if}
+                                {/for}
+                                <a href="{$url}&pg={$currentPage}" class="pagination__item pagination__item_active">{$currentPage}</a>
+                                {for $i = $currentPage+1; $i < $currentPage+3; $i++}
+                                    {if $i <= $pagesCount}
+                                        <a href="{$url}&pg={$i}" class="pagination__item">{$i}</a>
+                                    {/if}
+                                {/for}
+
+                                {if $currentPage < ($pagesCount - 3)}
+                                    <a class="pagination__dots">...</a>
+                                {/if}
+                                {if $currentPage < ($pagesCount - 2)}
+                                    <a href="{$url}&pg={$pagesCount}" class="pagination__item">{$pagesCount}</a>
+                                {/if}
+                                
+                                {if $currentPage < $pagesCount && $pagesCount > 2}
+                                    <a href="{$url}&pg={$currentPage + 1}" class="pagination__item">>></a>
+                                {/if}
+                            </div>
+                        {/if}
+                    {else}
+                        Nenalezeny žádné výsledky vyhledávání pro <strong>{$_GET['s']}</strong>.
+                    {/if}
+                </div>
+            </div>
+        </div>
+    </div>
+{/block}

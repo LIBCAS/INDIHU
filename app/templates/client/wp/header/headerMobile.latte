@@ -1,0 +1,21 @@
+{block headerMobile}
+<header id="mobile-menu" class="header-mobile">
+    <div class="header-mobile__container">
+        <div class="header-mobile__header">
+            <a href="{get_site_url()}" class="header-mobile__logo-text">
+                <img class="" src="{$img_dir}/logo.png" />
+            </a>
+            <div class="header-mobile__buttons">
+                <button id="close-mobile-menu" class="button header-mobile__close"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div class="header-mobile-menu">
+            {if $menuPrimary}
+                {foreach $menuPrimary->items as $item}
+                    <a href="{$item->link}" class="header-mobile-menu__item">{$item->title}</a>
+                {/foreach}
+            {/if}
+        </div>
+    </div>
+</header>
+{/block}

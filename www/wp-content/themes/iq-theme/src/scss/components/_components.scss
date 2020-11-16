@@ -1,0 +1,43 @@
+@import "wp/list";
+
+@import "header-mobile";
+@import "header-mobile-menu";
+@import "header-menu";
+@import "pagination";
+@import "slider";
+@import "video-slider";
+@import "smart-slider";
+@import "posts";
+@import "box";
+
+.sectiontitle {
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.menu-item a,
+.link-ul {
+    display: inline;
+    color: $c-black;
+    border-bottom-width: 1.5px;
+    border-bottom-style: solid;
+    border-bottom-color: $c-black;
+    transition: border-bottom .1s ease;
+}
+.menu-item a:hover,
+.link-ul:hover {
+    color: $c-black;
+    border-bottom-color: transparent;
+    text-decoration: none;
+}
+
+a {
+    color: $primary_color;
+    text-decoration: underline;
+}
+a:hover {
+    color: $primary_color;
+    text-decoration: none;
+}

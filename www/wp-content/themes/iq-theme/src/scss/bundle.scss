@@ -1,0 +1,19 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/variables';
+$fa-font-path: "../fonts";
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+
+@import '../../node_modules/photoswipe/dist/photoswipe';
+@import '../../node_modules/photoswipe/dist/default-skin/default-skin';
+
+@import "variables";
+@import "mixins";
+@import "components/components";
+
+@import "client/base";
+@import "client/header";
+@import "client/footer";
+@import "client/page";

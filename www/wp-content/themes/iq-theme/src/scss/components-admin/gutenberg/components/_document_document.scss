@@ -1,0 +1,33 @@
+.document{
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+
+    &__button{
+        border: none;
+        background: transparent;
+        color: #555d66;
+        padding: 0px;
+        width: 27px;
+        height: 27px;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:hover{
+            border-radius: 50%;
+            background: #f8f8f9;
+            color: #000;
+        }
+
+        &--delete{
+            margin-left: auto;
+
+            &:hover{
+                color: #c92c2c;
+            }
+        }
+    }
+}
