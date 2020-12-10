@@ -1,7 +1,7 @@
 # Zastřešující platforma INDIHU
 
-Tento repozitář obsahuje zdrojový kód k webovému rozhraní, které je dostupné na https://indihu.cz/.
-Web slouží jako zdroj informací a podkladů k projektu INDIHU. Zároveň tvoří rozcestník k jednotlivým aplikacím.
+Tento repozitář obsahuje zdrojové kody k webovému rozhraní zastřešující platformy INDIHU a softwarovým nástrojů (viz níže), které jsou dostupné na https://indihu.cz/.
+Webové rozhraní zastřešující platformy INDIHU slouží jako zdroj informací a podkladů k projektu INDIHU. Jsou zde integrovány jednotlivé sofwarové nástroje vyvinuté v rámmci projektu, ke kterým je možné z tohoto místa přistupovat.
 V rámci webu - zastřešující platformy INDIHU jsou použity technologie PHP7, MySQL (MariaDB) a CMS WordPress.
 
 **INDIHU Exhibition**: https://github.com/LIBCAS/INDIHU-Exhibition
