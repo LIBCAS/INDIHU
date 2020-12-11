@@ -20,7 +20,7 @@ Softwarové nástroje:
 ## O INDIHU
 Pětiletý projekt „INDIHU — Vývoj nástrojů a infrastruktury pro digital humanities“ byl řešen mezi lety 2016—2020. Na řešení projektu se podílela různorodá skupina pracovníků v humanitních vědách. Složení týmu bylo velmi pestré, což zásadním způsobem ovlivnilo výslednou podobu produktů, které jsou díky tomu využitelné napříč různými obory. Těžili jsme ze zázemí informační vědy, knihovnictví, nových médií, archeologie, etnografie, dějin umění, filozofie i bohemistiky. Více informací o projektu je dostupné na https://indihu.cz/o-indihu/, informace o vyvinutých nástrojích jsou uvedeny na https://indihu.cz/nastroje/.
 
-Projekt INDIHU — Vývoj nástrojů a infrastruktury pro digital humanities byl podpořen pod č. DG16P02B039 z programu MK ČR NAKI, programu na podporu aplikovaného výzkumu a experimentálního vývoje národní a kulturní identity.
+**Projekt INDIHU — Vývoj nástrojů a infrastruktury pro digital humanities byl podpořen pod č. DG16P02B039 z programu MK ČR NAKI, programu na podporu aplikovaného výzkumu a experimentálního vývoje národní a kulturní identity.**
 
 ## ŘEŠITELSKÝ TÝM
 Knihovna Akademie věd ČR (hlavní řešitel): Ing. Martin Lhoták, Ing. Martin Duda, Jana Křížová, Miroslav Pavelka
@@ -33,3 +33,4 @@ Filozofický ústav AV ČR, Archiv Jana Patočky: Mgr. Dana Léwová
 Ústav dějin umění AV ČR: PhDr. Jiří Roháček, CSc., Mgr. Jana Marešová, Ph.D.
 
 
+**Další informace jsou dostupné na https://indihu.cz/.**
