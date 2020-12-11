@@ -3,9 +3,9 @@ Hlavním cílem projektu bylo vytvořit potřebné nástroje a infrastrukturu pr
 
 # Zastřešující platforma INDIHU
 
-Tento repozitář obsahuje zdrojové kody k webovému rozhraní zastřešující platformy INDIHU a softwarovým nástrojů (viz níže), které jsou dostupné na https://indihu.cz/.
+Tento repozitář https://github.com/LIBCAS/INDIHU obsahuje zdrojové kody k webovému rozhraní zastřešující platformy INDIHU a softwarovým nástrojů (viz níže), které jsou dostupné na https://indihu.cz/.
 Webové rozhraní zastřešující platformy INDIHU slouží jako zdroj informací a podkladů k projektu INDIHU. Jsou zde integrovány jednotlivé sofwarové nástroje vyvinuté v rámci projektu, ke kterým je možné z tohoto místa přistupovat.
-V rámci webu - zastřešující platformy INDIHU jsou použity technologie PHP7, MySQL (MariaDB) a CMS WordPress.
+V rámci webu - zastřešující platformy INDIHU jsou použity technologie PHP7, MySQL (MariaDB) a CMS WordPress. Jako discovery systém pro Index v této zatřešující platformě, kde jsou zapojeny databáze vědeckých institucí participujících na projektu INDIHU bylo využito open source řešení VuFind.
 
 Softwarové nástroje:
 
